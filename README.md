@@ -63,7 +63,7 @@ All configuration is done via environment variables:
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `WHISPARR_URL` | `http://whisparr:9090` | Whisparr instance URL |
+| `WHISPARR_URL` | `http://whisparr:6969` | Whisparr instance URL |
 | `WHISPARR_API_KEY` | *(required)* | Whisparr API key |
 | `WHISPARR_QUALITY_PROFILE_ID` | `1` | Quality profile ID for added scenes |
 | `WHISPARR_ROOT_FOLDER_PATH` | *(auto)* | Root folder path (uses first if empty) |
@@ -103,9 +103,9 @@ environment:
   IMPORTARR_MODE: "stash"
   IMPORTARR_RUN_MODE: "once"
   IMPORTARR_DRY_RUN: "true"
-  WHISPARR_URL: "http://10.1.1.144:8008"
+  WHISPARR_URL: "http://10.1.1.44:6969"
   WHISPARR_API_KEY: "your-api-key"
-  STASH_URL: "http://10.1.1.130:9999"
+  STASH_URL: "http://10.1.1.30:9999"
   STASH_API_KEY: "your-stash-api-key"
 ```
 
@@ -143,7 +143,7 @@ environment:
 ```
 
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 
 ## How It Works
@@ -185,7 +185,7 @@ networks:
 
 Use container names in URLs:
 ```yaml
-WHISPARR_URL: "http://whisparr:9090"
+WHISPARR_URL: "http://whisparr:6969"
 STASH_URL: "http://stash:9999"
 ```
 
