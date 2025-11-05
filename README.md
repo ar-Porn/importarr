@@ -170,18 +170,8 @@ docker-compose up -d
 
 ## Networking
 
-If running Whisparr and Stash in Docker containers:
+If running Whisparr and Stash in Docker containers on the same host docker dns can be used:
 
-```yaml
-services:
-  importarr:
-    networks:
-      - media-network
-
-networks:
-  media-network:
-    external: true
-```
 
 Use container names in URLs:
 ```yaml
